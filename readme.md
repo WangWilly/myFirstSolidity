@@ -4,6 +4,17 @@ Practice the naive development of Solidity using Truffle.
 
 Checkout [console history](./docs/consoleHistory.md) to obtain comprehensive information.
 
+## Change logs
+
+### Apply command for initilization
+
+```bash
+truffle init
+npm init
+npm i @truffle/hdwallet-provider --save
+npm i dotenv --save
+```
+
 # Reference
 
 - ✅ [How to Create an ERC20 Token](https://www.toptal.com/ethereum/create-erc20-token-tutorial)
