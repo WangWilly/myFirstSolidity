@@ -4,15 +4,40 @@ Practice the naive development of Solidity using Truffle.
 
 Checkout [console history](./docs/consoleHistory.md) to obtain comprehensive information.
 
+- [Transection of token creation](https://sepolia.etherscan.io/tx/0xc8ba741daff2597b3b805dd093273d908f69ad601a639fa64a954ce3b00b176e)
+- [Address of WWKF token](https://sepolia.etherscan.io/address/0x03378daa43739f2361fe67175ad6bf2666309748)
+- [Token history](https://sepolia.etherscan.io/token/0x03378daa43739f2361fe67175ad6bf2666309748)
+
 ## Change logs
 
-### Apply command for initilization
+### Applied commands for initilization
+
+```bash
+npm install -g node-gyp
+npm install -g truffle
+
+willywangkaa@wangyulis-MacBook-Pro ~ % truffle version
+Truffle v5.8.2 (core: 5.8.2)
+Ganache v7.7.7
+Solidity v0.5.16 (solc-js)
+Node v18.16.0
+Web3.js v1.8.2
+```
 
 ```bash
 truffle init
+truffle create contract willywangkaaFirstContract
 npm init
 npm i @truffle/hdwallet-provider --save
 npm i dotenv --save
+```
+
+### Migrate the contract to Sepol
+
+Config the networks to **Sepolia**. (`truffle-configs.js`)
+```bash
+truffle compile
+truffle migrate --network sepolia
 ```
 
 # Reference
