@@ -8,7 +8,7 @@ Checkout [console history](./docs/consoleHistory.md) to obtain comprehensive inf
 - [Address of WWKF token](https://sepolia.etherscan.io/address/0x03378daa43739f2361fe67175ad6bf2666309748)
 - [Token history](https://sepolia.etherscan.io/token/0x03378daa43739f2361fe67175ad6bf2666309748)
 
-## Change logs
+## Reviews
 
 ### Applied commands for initilization
 
@@ -32,7 +32,7 @@ npm i @truffle/hdwallet-provider --save
 npm i dotenv --save
 ```
 
-### Migrate the contract to Sepol
+### Migrate the contract to Sepolia
 
 Config the networks to **Sepolia**. (`truffle-configs.js`)
 ```bash
