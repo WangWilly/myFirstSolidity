@@ -40,6 +40,37 @@ truffle compile
 truffle migrate --network sepolia
 ```
 
+### Generate contract bindings in golang
+
+Add the following command at the end of `~/.zprofile` (MacOS environment):
+```bash
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
+
+Outside this workspace to keep clean, do the following step to obtain `abigen`:
+```bash
+# 📌 https://www.metachris.com/2021/05/creating-go-bindings-for-ethereum-smart-contracts/#the-abigen-tool
+# 📌 Download go-ethereum, build and install the devtools (which includes abigen)
+git clone https://github.com/ethereum/go-ethereum.git
+cd go-ethereum
+make devtools
+
+# 📌 Run abigen and print the version
+abigen -version
+abigen -help
+```
+
+Back to this workspace, run the following command to generate `.abi` and the corresponding `.go` (the binding). 😊
+```bash
+# 📌 https://www.npmjs.com/package/@chainsafe/truffle-plugin-abigen
+# 📌 https://www.metachris.com/2021/05/creating-go-bindings-for-ethereum-smart-contracts/#smart-contracts-with-truffle
+mkdir ./abigenBindings
+mkdir ./abigenBindings/binding
+truffle run abigen
+abigen --abi=abigenBindings/abi/willywangkaaFirstContract.abi --pkg=wwkf --out=abigenBindings/binding/wwkf.go
+```
+
 # Reference
 
 - ✅ [How to Create an ERC20 Token](https://www.toptal.com/ethereum/create-erc20-token-tutorial)

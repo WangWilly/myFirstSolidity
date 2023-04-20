@@ -47,7 +47,6 @@ const { PRIVATE_KEY, PROJECT_ID } = process.env;
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
-  contracts_directory: './contracts',
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
@@ -57,6 +56,11 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
+  contracts_directory: './contracts',
+
+  plugins: [
+    "@chainsafe/truffle-plugin-abigen"
+  ],
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
